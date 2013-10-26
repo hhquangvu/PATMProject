@@ -28,16 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    CLLocationCoordinate2D zoomLocation;
-    
-    zoomLocation.latitude = 10.762622;
-    zoomLocation.longitude = 106.660172;
-    
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 400, 400);
-    
-    [self.mapView setRegion:viewRegion];
 
+    // Init Location Service
+    [self initLocationService];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,10 +45,33 @@
 }
 
 #pragma mark - User Defide
-- (void)initLocationManager
+- (void)initLocationService
+{
+    if ([CLLocationManager locationServicesEnabled] == NO) {
+        
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Can't find your location" message:@"Please turn on your Location Service" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles: nil];
+        [alertView show];
+        
+    } else {
+        [self getCurrentLocation];
+    }
+    
+}
+
+- (void)getCurrentLocation
 {
     locationManager = [[CLLocationManager alloc]init];
     [locationManager setDelegate:self];
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [locationManager startUpdatingLocation];
+    
+    CLLocationCoordinate2D zoomLocation;
+    
+    zoomLocation.latitude = 10.762622;
+    zoomLocation.longitude = 106.660172;
+    
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 400, 400);
+    
+    [self.mapView setRegion:viewRegion];
 }
 @end

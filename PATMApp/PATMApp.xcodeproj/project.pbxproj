@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84979FDF181AD8AB007F4738 /* PAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84979FDE181AD8AB007F4738 /* PAViewController.m */; };
-		84979FE0181AD8AB007F4738 /* PAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84979FDE181AD8AB007F4738 /* PAViewController.m */; };
 		84979FE5181AD978007F4738 /* ico_card.png in Resources */ = {isa = PBXBuildFile; fileRef = 84979FE2181AD978007F4738 /* ico_card.png */; };
 		84979FE6181AD978007F4738 /* ico_card.png in Resources */ = {isa = PBXBuildFile; fileRef = 84979FE2181AD978007F4738 /* ico_card.png */; };
 		84979FE8181ADA21007F4738 /* ico_gas.png in Resources */ = {isa = PBXBuildFile; fileRef = 84979FE7181ADA21007F4738 /* ico_gas.png */; };
@@ -43,8 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		84979FDD181AD8AB007F4738 /* PAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAViewController.h; sourceTree = "<group>"; };
-		84979FDE181AD8AB007F4738 /* PAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAViewController.m; sourceTree = "<group>"; };
 		84979FE2181AD978007F4738 /* ico_card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_card.png; sourceTree = "<group>"; };
 		84979FE7181ADA21007F4738 /* ico_gas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_gas.png; sourceTree = "<group>"; };
 		84979FEA181ADA81007F4738 /* PAGasFindController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAGasFindController.h; sourceTree = "<group>"; };
@@ -99,8 +95,6 @@
 		84979FD9181AD89E007F4738 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				84979FDD181AD8AB007F4738 /* PAViewController.h */,
-				84979FDE181AD8AB007F4738 /* PAViewController.m */,
 				84979FEA181ADA81007F4738 /* PAGasFindController.h */,
 				84979FEB181ADA81007F4738 /* PAGasFindController.m */,
 			);
@@ -312,7 +306,6 @@
 			files = (
 				84BA0CDD181A58DF009899C9 /* main.m in Sources */,
 				84979FEC181ADA81007F4738 /* PAGasFindController.m in Sources */,
-				84979FDF181AD8AB007F4738 /* PAViewController.m in Sources */,
 				84A51DD8181BA03A0068D166 /* PALocationItem.m in Sources */,
 				84BA0CE1181A58DF009899C9 /* PAAppDelegate.m in Sources */,
 			);
@@ -324,7 +317,6 @@
 			files = (
 				84979FED181ADA81007F4738 /* PAGasFindController.m in Sources */,
 				84BA0CFC181A58DF009899C9 /* PATMAppTests.m in Sources */,
-				84979FE0181AD8AB007F4738 /* PAViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
