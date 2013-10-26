@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="cg4-bO-9Qk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="cg4-bO-9Qk">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Gas Find Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="PAViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="PAGasFindController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uAE-d0-VY1"/>
                         <viewControllerLayoutGuide type="bottom" id="VN7-kS-mSO"/>
@@ -15,9 +15,18 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rKp-GX-F0G">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="kFL-d0-4Vj"/>
+                    <connections>
+                        <outlet property="mapView" destination="rKp-GX-F0G" id="9Mu-hP-cfD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -36,7 +45,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ATM Finder" id="Xb0-MP-CQC"/>
+                    <tabBarItem key="tabBarItem" title="ATM Finder" image="ico_card.png" id="Xb0-MP-CQC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A9a-mB-Erc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,7 +55,7 @@
         <scene sceneID="6JJ-MA-cVU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eK2-IS-ujL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Gas Finder" id="Yz1-zi-etZ"/>
+                    <tabBarItem key="tabBarItem" title="Gas Finder" image="ico_gas.png" id="Yz1-zi-etZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qrm-NS-uZH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -81,6 +90,10 @@
             <point key="canvasLocation" x="149" y="-167"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ico_card.png" width="32" height="32"/>
+        <image name="ico_gas.png" width="26" height="26"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
