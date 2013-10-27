@@ -28,6 +28,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UnitOfWork *unitOfWork = [UnitOfWork sharedInstance];
+    BaseReponsitory *mapItemRepository = unitOfWork.mapItemRepository;
+    NSArray *array = [mapItemRepository getAll];
+    NSLog(@"%ld",[array count]);
 
     // Init Location Service
     [self initLocationService];
@@ -45,6 +50,9 @@
 }
 
 #pragma mark - User Defide
+/****************************************************
+ Check your location services is turn on, then get your location
+ ****************************************************/
 - (void)initLocationService
 {
     if ([CLLocationManager locationServicesEnabled] == NO) {
@@ -58,6 +66,9 @@
     
 }
 
+/****************************************************
+ Get Current Your Location
+ ****************************************************/
 - (void)getCurrentLocation
 {
     locationManager = [[CLLocationManager alloc]init];

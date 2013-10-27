@@ -12,6 +12,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Init the Stack Mob
+    self.client = [[SMClient alloc] initWithAPIVersion:@"0" publicKey:@"1d139cfb-8474-4923-8162-8caa2d1a230f"];
+
     // Override point for customization after application launch.
     return YES;
 }
