@@ -10,4 +10,25 @@
 
 @implementation PALocationItem
 
+- (void)setData:(MapItem *)mapItem
+{
+    _mapItem = mapItem;
+    _coordinate.latitude = _mapItem.maplat.floatValue;
+    _coordinate.longitude = _mapItem.maplong.floatValue;
+}
+
+- (NSString *)title
+{
+    return _mapItem.name;
+}
+
+- (NSString *)subtitle
+{
+    return _mapItem.address;
+}
+
+- (CLLocationCoordinate2D)coordinate
+{
+    return _coordinate;
+}
 @end

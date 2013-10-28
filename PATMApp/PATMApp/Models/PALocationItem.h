@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
-@interface PALocationItem : NSObject
+@interface PALocationItem : NSObject<MKAnnotation> {
+    @private
+    CLLocationCoordinate2D _coordinate;
+    @private
+    MapItem *_mapItem;
+}
+
+- (void)setData:(MapItem*)mapItem;
 
 @end

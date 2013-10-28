@@ -7,6 +7,8 @@
 //
 
 #import "PAGasFindController.h"
+#import "PALocationItem.h"
+#import "PAGasDetailController.h"
 
 @interface PAGasFindController ()
 
@@ -29,13 +31,11 @@
 {
     [super viewDidLoad];
     
-    UnitOfWork *unitOfWork = [UnitOfWork sharedInstance];
-    BaseReponsitory *mapItemRepository = unitOfWork.mapItemRepository;
-    NSArray *array = [mapItemRepository getAll];
-    NSLog(@"%ld",[array count]);
-
     // Init Location Service
     [self initLocationService];
+    
+    // Get and set Annotation View in my Map
+    [self getAnnotationView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,45 +44,62 @@
     // Dispose of any resources that can be recreated.
 }
 #pragma mark - CLLocationManager Life Cycle
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
-    //CLLocation *location = [locations lastObject];
+    if (![annotation isKindOfClass:[PALocationItem class]]) {
+        return nil;
+    }
+    
+    MKAnnotationView *annotationView = [self.mapView dequeueReusableAnnotationViewWithIdentifier:@"MyLocation"];
+    
+    if (annotationView == nil) {
+        annotationView = [[MKAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"MyLocation"];
+        annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    }
+    
+    annotationView.canShowCallout = YES;
+    annotationView.enabled = YES;
+    annotationView.annotation = annotation;
+    
+    return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    NSLog(@"SS");
 }
 
 #pragma mark - User Defide
 /****************************************************
- Check your location services is turn on, then get your location
+ Init from Location Service
  ****************************************************/
 - (void)initLocationService
 {
-    if ([CLLocationManager locationServicesEnabled] == NO) {
-        
-        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Can't find your location" message:@"Please turn on your Location Service" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles: nil];
-        [alertView show];
-        
-    } else {
-        [self getCurrentLocation];
-    }
+    PALocationService *locationService = [PALocationService defaultService];
     
-}
-
-/****************************************************
- Get Current Your Location
- ****************************************************/
-- (void)getCurrentLocation
-{
-    locationManager = [[CLLocationManager alloc]init];
-    [locationManager setDelegate:self];
-    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-    [locationManager startUpdatingLocation];
+    NSDictionary *dic = [locationService getCurrentLocation];
+    NSNumber *latitude = [dic objectForKey:@"latitude"];
+    NSNumber *longitude = [dic objectForKey:@"longitude"];
     
     CLLocationCoordinate2D zoomLocation;
     
-    zoomLocation.latitude = 10.762622;
-    zoomLocation.longitude = 106.660172;
+    zoomLocation.latitude = [latitude doubleValue];
+    zoomLocation.longitude = [longitude doubleValue];
     
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 400, 400);
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 800, 800);
     
     [self.mapView setRegion:viewRegion];
+}
+
+/****************************************************
+ Get Map Item from server
+ ****************************************************/
+-  (void)getAnnotationView
+{
+    PALocationService *locationService = [PALocationService defaultService];
+    NSArray *mapItems = [locationService getAnnotationViewFromServer];
+    for (PALocationItem *item in mapItems) {
+        [self.mapView addAnnotation:item];
+    }
 }
 @end

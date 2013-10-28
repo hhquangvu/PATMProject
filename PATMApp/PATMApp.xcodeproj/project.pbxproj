@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84876A70181D6DF5006021C6 /* MapItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 84876A6F181D6DF5006021C6 /* MapItem.m */; };
+		84876A73181D9A87006021C6 /* PAGasDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84876A72181D9A87006021C6 /* PAGasDetailController.m */; };
+		84876A76181EBA5C006021C6 /* PAATMFindController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84876A75181EBA5C006021C6 /* PAATMFindController.m */; };
+		84876A79181EBC02006021C6 /* PALocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 84876A78181EBC02006021C6 /* PALocationService.m */; };
 		84979FE5181AD978007F4738 /* ico_card.png in Resources */ = {isa = PBXBuildFile; fileRef = 84979FE2181AD978007F4738 /* ico_card.png */; };
 		84979FE6181AD978007F4738 /* ico_card.png in Resources */ = {isa = PBXBuildFile; fileRef = 84979FE2181AD978007F4738 /* ico_card.png */; };
 		84979FE8181ADA21007F4738 /* ico_gas.png in Resources */ = {isa = PBXBuildFile; fileRef = 84979FE7181ADA21007F4738 /* ico_gas.png */; };
@@ -28,8 +32,6 @@
 		84A51E6A181C3BF30068D166 /* UnitOfWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A51E66181C3BF30068D166 /* UnitOfWork.m */; };
 		84A51E6D181C3CBF0068D166 /* PATMData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84A51E6B181C3CBE0068D166 /* PATMData.xcdatamodeld */; };
 		84A51E6E181C3CBF0068D166 /* PATMData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84A51E6B181C3CBE0068D166 /* PATMData.xcdatamodeld */; };
-		84A51E71181C3D710068D166 /* MapItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A51E70181C3D710068D166 /* MapItem.m */; };
-		84A51E72181C3D710068D166 /* MapItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A51E70181C3D710068D166 /* MapItem.m */; };
 		84BA0CD1181A58DF009899C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BA0CD0181A58DF009899C9 /* Foundation.framework */; };
 		84BA0CD3181A58DF009899C9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BA0CD2181A58DF009899C9 /* CoreGraphics.framework */; };
 		84BA0CD5181A58DF009899C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BA0CD4181A58DF009899C9 /* UIKit.framework */; };
@@ -56,6 +58,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84876A6E181D6DF5006021C6 /* MapItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapItem.h; sourceTree = "<group>"; };
+		84876A6F181D6DF5006021C6 /* MapItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapItem.m; sourceTree = "<group>"; };
+		84876A71181D9A87006021C6 /* PAGasDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAGasDetailController.h; sourceTree = "<group>"; };
+		84876A72181D9A87006021C6 /* PAGasDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAGasDetailController.m; sourceTree = "<group>"; };
+		84876A74181EBA5C006021C6 /* PAATMFindController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAATMFindController.h; sourceTree = "<group>"; };
+		84876A75181EBA5C006021C6 /* PAATMFindController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAATMFindController.m; sourceTree = "<group>"; };
+		84876A77181EBC02006021C6 /* PALocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PALocationService.h; sourceTree = "<group>"; };
+		84876A78181EBC02006021C6 /* PALocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PALocationService.m; sourceTree = "<group>"; };
 		84979FE2181AD978007F4738 /* ico_card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_card.png; sourceTree = "<group>"; };
 		84979FE7181ADA21007F4738 /* ico_gas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_gas.png; sourceTree = "<group>"; };
 		84979FEA181ADA81007F4738 /* PAGasFindController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAGasFindController.h; sourceTree = "<group>"; };
@@ -127,8 +137,6 @@
 		84A51E65181C3BF30068D166 /* UnitOfWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitOfWork.h; sourceTree = "<group>"; };
 		84A51E66181C3BF30068D166 /* UnitOfWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitOfWork.m; sourceTree = "<group>"; };
 		84A51E6C181C3CBF0068D166 /* PATMData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PATMData.xcdatamodel; sourceTree = "<group>"; };
-		84A51E6F181C3D710068D166 /* MapItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapItem.h; sourceTree = "<group>"; };
-		84A51E70181C3D710068D166 /* MapItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapItem.m; sourceTree = "<group>"; };
 		84BA0CCD181A58DF009899C9 /* PATMApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PATMApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BA0CD0181A58DF009899C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84BA0CD2181A58DF009899C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -184,6 +192,10 @@
 			children = (
 				84979FEA181ADA81007F4738 /* PAGasFindController.h */,
 				84979FEB181ADA81007F4738 /* PAGasFindController.m */,
+				84876A71181D9A87006021C6 /* PAGasDetailController.h */,
+				84876A72181D9A87006021C6 /* PAGasDetailController.m */,
+				84876A74181EBA5C006021C6 /* PAATMFindController.h */,
+				84876A75181EBA5C006021C6 /* PAATMFindController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,8 +203,8 @@
 		84979FDA181AD89E007F4738 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				84A51E6F181C3D710068D166 /* MapItem.h */,
-				84A51E70181C3D710068D166 /* MapItem.m */,
+				84876A6E181D6DF5006021C6 /* MapItem.h */,
+				84876A6F181D6DF5006021C6 /* MapItem.m */,
 				84A51DD6181BA03A0068D166 /* PALocationItem.h */,
 				84A51DD7181BA03A0068D166 /* PALocationItem.m */,
 			);
@@ -215,6 +227,8 @@
 				84A51E64181C3BF30068D166 /* BaseReponsitory.m */,
 				84A51E65181C3BF30068D166 /* UnitOfWork.h */,
 				84A51E66181C3BF30068D166 /* UnitOfWork.m */,
+				84876A77181EBC02006021C6 /* PALocationService.h */,
+				84876A78181EBC02006021C6 /* PALocationService.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -344,8 +358,8 @@
 				84BA0CE0181A58DF009899C9 /* PAAppDelegate.m */,
 				84BA0CE2181A58DF009899C9 /* Main.storyboard */,
 				84BA0CE8181A58DF009899C9 /* Images.xcassets */,
-				84BA0CD7181A58DF009899C9 /* Supporting Files */,
 				84A51E6B181C3CBE0068D166 /* PATMData.xcdatamodeld */,
+				84BA0CD7181A58DF009899C9 /* Supporting Files */,
 			);
 			path = PATMApp;
 			sourceTree = "<group>";
@@ -483,13 +497,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A51E69181C3BF30068D166 /* UnitOfWork.m in Sources */,
-				84A51E71181C3D710068D166 /* MapItem.m in Sources */,
+				84876A79181EBC02006021C6 /* PALocationService.m in Sources */,
+				84876A70181D6DF5006021C6 /* MapItem.m in Sources */,
+				84876A76181EBA5C006021C6 /* PAATMFindController.m in Sources */,
 				84BA0CDD181A58DF009899C9 /* main.m in Sources */,
 				84979FEC181ADA81007F4738 /* PAGasFindController.m in Sources */,
 				84A51DD8181BA03A0068D166 /* PALocationItem.m in Sources */,
 				84BA0CE1181A58DF009899C9 /* PAAppDelegate.m in Sources */,
 				84A51E6D181C3CBF0068D166 /* PATMData.xcdatamodeld in Sources */,
 				84A51E67181C3BF30068D166 /* BaseReponsitory.m in Sources */,
+				84876A73181D9A87006021C6 /* PAGasDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,7 +515,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A51E68181C3BF30068D166 /* BaseReponsitory.m in Sources */,
-				84A51E72181C3D710068D166 /* MapItem.m in Sources */,
 				84A51E6E181C3CBF0068D166 /* PATMData.xcdatamodeld in Sources */,
 				84979FED181ADA81007F4738 /* PAGasFindController.m in Sources */,
 				84A51E6A181C3BF30068D166 /* UnitOfWork.m in Sources */,

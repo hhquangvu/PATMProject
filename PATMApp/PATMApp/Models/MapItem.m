@@ -11,13 +11,14 @@
 
 @implementation MapItem
 
-@dynamic mapitem_id;
 @dynamic address;
-@dynamic name;
+@dynamic corporation;
+@dynamic mapitem_id;
 @dynamic maplat;
 @dynamic maplong;
+@dynamic name;
 @dynamic rate;
-@dynamic type;
 @dynamic sm_owner;
+@dynamic type;
 
 @end

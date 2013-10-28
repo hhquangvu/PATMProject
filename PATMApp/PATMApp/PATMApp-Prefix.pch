@@ -19,4 +19,5 @@
     #import "MapItem.h"
     #import "UnitOfWork.h"
     #import "BaseReponsitory.h"
+    #import "PALocationService.h"
 #endif

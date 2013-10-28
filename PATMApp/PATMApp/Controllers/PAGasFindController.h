@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface PAGasFindController : UIViewController<CLLocationManagerDelegate>{
+@interface PAGasFindController : UIViewController<MKMapViewDelegate>{
     CLLocationManager *locationManager;
 }
 
