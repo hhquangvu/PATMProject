@@ -14,5 +14,5 @@
 + defaultService;
 
 - getCurrentLocation;
-- getAnnotationViewFromServer;
+- getAnnotationViewWithType:(int)type;
 @end

@@ -30,12 +30,14 @@ static PALocationService *service;
     return nil;
 }
 
--  (id)getAnnotationViewFromServer
+-  (id)getAnnotationViewWithType:(int)type
 {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"type=%d",type];
+    
     NSMutableArray *returnData = [[NSMutableArray alloc]initWithCapacity:1];
     UnitOfWork *unitOfWork = [UnitOfWork sharedInstance];
     BaseReponsitory *mapItemRepository = unitOfWork.mapItemRepository;
-    NSArray *mapItems = [mapItemRepository getAll];
+    NSArray *mapItems = [mapItemRepository getObjectsWithPredicate:predicate];
     for (MapItem *item in mapItems) {
         PALocationItem *location = [[PALocationItem alloc]init];
         [location setData:item];

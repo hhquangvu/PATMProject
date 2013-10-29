@@ -32,10 +32,10 @@
             </objects>
             <point key="canvasLocation" x="1190" y="91"/>
         </scene>
-        <!--View Controller - ATM Finder-->
+        <!--Find Controller - ATM Finder-->
         <scene sceneID="WHv-UU-iOX">
             <objects>
-                <viewController id="wCZ-Q0-KO2" sceneMemberID="viewController">
+                <viewController id="wCZ-Q0-KO2" customClass="PAATMFindController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VqJ-UX-SNo"/>
                         <viewControllerLayoutGuide type="bottom" id="rmf-mi-ur8"/>
@@ -59,6 +59,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="ATM Finder" image="ico_card.png" id="Xb0-MP-CQC"/>
+                    <connections>
+                        <outlet property="mapView" destination="gej-Bq-OJd" id="B27-eg-wFL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A9a-mB-Erc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

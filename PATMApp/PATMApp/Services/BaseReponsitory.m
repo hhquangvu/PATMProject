@@ -27,6 +27,25 @@
     return fetchObjects;
 }
 
+// Get Objects With Predicate
+- (NSArray *)getObjectsWithPredicate:(NSPredicate *)predicate
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:[self.class description]];
+    
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *fetchError;
+    
+    id fetchObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&fetchError];
+    
+    if (fetchError) {
+        NSLog(@"Cannot Fetch");
+        return nil;
+    }
+    
+    return fetchObjects;
+}
+
 // get Model function
 - (id)getModel{
     return [NSEntityDescription insertNewObjectForEntityForName:[self.class description] inManagedObjectContext:self.managedObjectContext];

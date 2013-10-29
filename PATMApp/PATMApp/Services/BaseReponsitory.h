@@ -15,5 +15,5 @@
 
 - (id)getModel;
 - (NSArray*)getAll;
-
+- (NSArray*)getObjectsWithPredicate:(NSPredicate*)predicate;
 @end

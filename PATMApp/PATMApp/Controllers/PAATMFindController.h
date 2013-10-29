@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PAATMFindController : UIViewController
+@interface PAATMFindController : PABaseMapController
 
 @end

@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [self getATMFromServer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +37,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+/****************************************************
+ Get Map Item from server (ATM)
+ ****************************************************/
+-  (void)getATMFromServer
+{
+    PALocationService *locationService = [PALocationService defaultService];
+    NSArray *mapItems = [locationService getAnnotationViewWithType:2];
+    for (PALocationItem *item in mapItems) {
+        [self.mapView addAnnotation:item];
+    }
+}
 @end
