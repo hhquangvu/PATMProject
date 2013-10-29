@@ -52,7 +52,13 @@
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="nQr-c9-T3P"/>
+                                    <navigationItem title="Title" id="nQr-c9-T3P">
+                                        <barButtonItem key="leftBarButtonItem" title="Filter" id="FGa-Cx-RhB">
+                                            <connections>
+                                                <action selector="onFilterButtonDidTouch:" destination="wCZ-Q0-KO2" id="IL1-kr-mJP"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PAATMFindController : PABaseMapController
+@interface PAATMFindController : PABaseMapController<UIPickerViewDelegate,UIPickerViewDataSource>
 
 @end
