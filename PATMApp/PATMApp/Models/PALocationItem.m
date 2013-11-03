@@ -31,4 +31,9 @@
 {
     return _coordinate;
 }
+
+- (MapItem *)getMapItem
+{
+    return _mapItem;
+}
 @end

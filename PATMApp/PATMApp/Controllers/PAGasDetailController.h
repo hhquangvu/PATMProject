@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PAGasDetailController : UIViewController
+@interface PAGasDetailController : UIViewController{
+    @private
+    MapItem *_mapItem;
+}
+
+- (void)setMapItem:(MapItem*)mapItem;
 
 @end

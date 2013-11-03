@@ -27,7 +27,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     // Init Location Service
     [self initLocationService];
 }
@@ -37,31 +36,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-#pragma mark - CLLocationManager Life Cycle
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
-{
-    if (![annotation isKindOfClass:[PALocationItem class]]) {
-        return nil;
-    }
-    
-    MKAnnotationView *annotationView = [self.mapView dequeueReusableAnnotationViewWithIdentifier:@"MyLocation"];
-    
-    if (annotationView == nil) {
-        annotationView = [[MKAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"MyLocation"];
-        annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    }
-    
-    annotationView.canShowCallout = YES;
-    annotationView.enabled = YES;
-    annotationView.annotation = annotation;
-    
-    return annotationView;
-}
 
-- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
-{
-    NSLog(@"SS");
-}
 
 #pragma mark - User Defide
 /****************************************************

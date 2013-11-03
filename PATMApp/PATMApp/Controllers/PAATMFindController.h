@@ -10,4 +10,6 @@
 
 @interface PAATMFindController : PABaseMapController<UIPickerViewDelegate,UIPickerViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
+
 @end

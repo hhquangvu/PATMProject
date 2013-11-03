@@ -27,14 +27,26 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.pickerView.hidden = YES;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    
+    // Set delegate for map view, very important
+    [self.mapView setDelegate:self];
+    
+    self.pickerView.delegate = self;
+    
     [self getATMFromServer];
     
     _banks = @[@"DongA Bank",@"Vietcombank",@"Techcombank"];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,14 +89,7 @@
 }
 #pragma mark - IBAction
 - (IBAction)onFilterButtonDidTouch:(id)sender {
-    UIPickerView *pickerView = [[UIPickerView alloc]init];
-    pickerView.frame = CGRectMake(0, 500, pickerView.frame.size.width, pickerView.frame.size.height);
-    [UIView beginAnimations:nil context:NULL];    [UIView setAnimationDuration:.50];
-    [UIView setAnimationDelegate:self];
-    pickerView.frame = CGRectMake(0, 200, pickerView.frame.size.width, pickerView.frame.size.height);
-    [self.view addSubview:pickerView];
-    [UIView commitAnimations];
-    pickerView.delegate = self;
+    self.pickerView.hidden = NO;
 
 }
 @end

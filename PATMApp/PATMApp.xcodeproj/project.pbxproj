@@ -11,6 +11,10 @@
 		84876A73181D9A87006021C6 /* PAGasDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84876A72181D9A87006021C6 /* PAGasDetailController.m */; };
 		84876A76181EBA5C006021C6 /* PAATMFindController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84876A75181EBA5C006021C6 /* PAATMFindController.m */; };
 		84876A79181EBC02006021C6 /* PALocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 84876A78181EBC02006021C6 /* PALocationService.m */; };
+		848F46971826AD31009F0A2D /* ico_gas_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 848F46951826AD31009F0A2D /* ico_gas_ok.png */; };
+		848F46991826AD9A009F0A2D /* ico_gas_bad.png in Resources */ = {isa = PBXBuildFile; fileRef = 848F46981826AD9A009F0A2D /* ico_gas_bad.png */; };
+		848F469E1826BCA9009F0A2D /* ico_pin_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 848F469C1826BCA9009F0A2D /* ico_pin_green.png */; };
+		848F469F1826BCA9009F0A2D /* ico_pin_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 848F469D1826BCA9009F0A2D /* ico_pin_red.png */; };
 		8490778D1820104C0077ED27 /* PABaseMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8490778C1820104C0077ED27 /* PABaseMapController.m */; };
 		84979FE5181AD978007F4738 /* ico_card.png in Resources */ = {isa = PBXBuildFile; fileRef = 84979FE2181AD978007F4738 /* ico_card.png */; };
 		84979FE6181AD978007F4738 /* ico_card.png in Resources */ = {isa = PBXBuildFile; fileRef = 84979FE2181AD978007F4738 /* ico_card.png */; };
@@ -67,6 +71,10 @@
 		84876A75181EBA5C006021C6 /* PAATMFindController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAATMFindController.m; sourceTree = "<group>"; };
 		84876A77181EBC02006021C6 /* PALocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PALocationService.h; sourceTree = "<group>"; };
 		84876A78181EBC02006021C6 /* PALocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PALocationService.m; sourceTree = "<group>"; };
+		848F46951826AD31009F0A2D /* ico_gas_ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_gas_ok.png; sourceTree = "<group>"; };
+		848F46981826AD9A009F0A2D /* ico_gas_bad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_gas_bad.png; sourceTree = "<group>"; };
+		848F469C1826BCA9009F0A2D /* ico_pin_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_pin_green.png; sourceTree = "<group>"; };
+		848F469D1826BCA9009F0A2D /* ico_pin_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_pin_red.png; sourceTree = "<group>"; };
 		8490778B1820104C0077ED27 /* PABaseMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PABaseMapController.h; sourceTree = "<group>"; };
 		8490778C1820104C0077ED27 /* PABaseMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PABaseMapController.m; sourceTree = "<group>"; };
 		84979FE2181AD978007F4738 /* ico_card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_card.png; sourceTree = "<group>"; };
@@ -219,6 +227,10 @@
 		84979FDB181AD89E007F4738 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				848F469C1826BCA9009F0A2D /* ico_pin_green.png */,
+				848F469D1826BCA9009F0A2D /* ico_pin_red.png */,
+				848F46981826AD9A009F0A2D /* ico_gas_bad.png */,
+				848F46951826AD31009F0A2D /* ico_gas_ok.png */,
 				84979FE7181ADA21007F4738 /* ico_gas.png */,
 				84979FE2181AD978007F4738 /* ico_card.png */,
 			);
@@ -478,9 +490,13 @@
 				84979FE5181AD978007F4738 /* ico_card.png in Resources */,
 				84A51E57181BBF6E0068D166 /* CHANGELOG.md in Resources */,
 				84BA0CE9181A58DF009899C9 /* Images.xcassets in Resources */,
+				848F469F1826BCA9009F0A2D /* ico_pin_red.png in Resources */,
 				84BA0CDB181A58DF009899C9 /* InfoPlist.strings in Resources */,
 				84BA0CE4181A58DF009899C9 /* Main.storyboard in Resources */,
+				848F46991826AD9A009F0A2D /* ico_gas_bad.png in Resources */,
 				84979FE8181ADA21007F4738 /* ico_gas.png in Resources */,
+				848F469E1826BCA9009F0A2D /* ico_pin_green.png in Resources */,
+				848F46971826AD31009F0A2D /* ico_gas_ok.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

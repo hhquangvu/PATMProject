@@ -15,7 +15,6 @@
     @private
     MapItem *_mapItem;
 }
-
 - (void)setData:(MapItem*)mapItem;
-
+- (MapItem*)getMapItem;
 @end
