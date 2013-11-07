@@ -46,6 +46,7 @@
     return fetchObjects;
 }
 
+
 // get Model function
 - (id)getModel{
     return [NSEntityDescription insertNewObjectForEntityForName:[self.class description] inManagedObjectContext:self.managedObjectContext];

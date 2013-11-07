@@ -9,6 +9,7 @@
 #import "PAGasDetailController.h"
 
 @interface PAGasDetailController ()
+- (IBAction)onNoticeButtonDidTouch:(id)sender;
 
 @end
 
@@ -62,5 +63,13 @@
         imageView.image = [UIImage imageNamed:@"ico_gas_ok"];
     }
     
+}
+- (IBAction)onNoticeButtonDidTouch:(id)sender {
+    UnitOfWork *unitOfWork = [UnitOfWork sharedInstance];
+    
+    [_mapItem setValue:[NSNumber numberWithInt:9999] forKey:@"rate"];
+
+    [unitOfWork savedChanges];
+
 }
 @end

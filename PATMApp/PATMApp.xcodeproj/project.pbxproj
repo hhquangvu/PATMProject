@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8474AACD182BE7BE0083B238 /* PAMapItemRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 8474AACC182BE7BE0083B238 /* PAMapItemRepository.m */; };
+		8474AACE182BE7BE0083B238 /* PAMapItemRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 8474AACC182BE7BE0083B238 /* PAMapItemRepository.m */; };
 		84876A70181D6DF5006021C6 /* MapItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 84876A6F181D6DF5006021C6 /* MapItem.m */; };
 		84876A73181D9A87006021C6 /* PAGasDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84876A72181D9A87006021C6 /* PAGasDetailController.m */; };
 		84876A76181EBA5C006021C6 /* PAATMFindController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84876A75181EBA5C006021C6 /* PAATMFindController.m */; };
@@ -63,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8474AACB182BE7BE0083B238 /* PAMapItemRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAMapItemRepository.h; sourceTree = "<group>"; };
+		8474AACC182BE7BE0083B238 /* PAMapItemRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAMapItemRepository.m; sourceTree = "<group>"; };
 		84876A6E181D6DF5006021C6 /* MapItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapItem.h; sourceTree = "<group>"; };
 		84876A6F181D6DF5006021C6 /* MapItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapItem.m; sourceTree = "<group>"; };
 		84876A71181D9A87006021C6 /* PAGasDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAGasDetailController.h; sourceTree = "<group>"; };
@@ -246,6 +250,8 @@
 				84A51E66181C3BF30068D166 /* UnitOfWork.m */,
 				84876A77181EBC02006021C6 /* PALocationService.h */,
 				84876A78181EBC02006021C6 /* PALocationService.m */,
+				8474AACB182BE7BE0083B238 /* PAMapItemRepository.h */,
+				8474AACC182BE7BE0083B238 /* PAMapItemRepository.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -528,6 +534,7 @@
 				84BA0CE1181A58DF009899C9 /* PAAppDelegate.m in Sources */,
 				84A51E6D181C3CBF0068D166 /* PATMData.xcdatamodeld in Sources */,
 				84A51E67181C3BF30068D166 /* BaseReponsitory.m in Sources */,
+				8474AACD182BE7BE0083B238 /* PAMapItemRepository.m in Sources */,
 				84876A73181D9A87006021C6 /* PAGasDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,6 +547,7 @@
 				84A51E6E181C3CBF0068D166 /* PATMData.xcdatamodeld in Sources */,
 				84979FED181ADA81007F4738 /* PAGasFindController.m in Sources */,
 				84A51E6A181C3BF30068D166 /* UnitOfWork.m in Sources */,
+				8474AACE182BE7BE0083B238 /* PAMapItemRepository.m in Sources */,
 				84BA0CFC181A58DF009899C9 /* PATMAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

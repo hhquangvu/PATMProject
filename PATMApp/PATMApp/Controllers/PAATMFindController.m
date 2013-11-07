@@ -11,6 +11,8 @@
 @interface PAATMFindController (){
     @private
     NSArray *_banks;
+    @private
+    NSArray *_bankNames;
 }
 - (IBAction)onFilterButtonDidTouch:(id)sender;
 
@@ -45,7 +47,7 @@
     
     [self getATMFromServer];
     
-    _banks = @[@"DongA Bank",@"Vietcombank",@"Techcombank"];
+    _bankNames = [self getBankNameList];
     
 }
 
@@ -62,17 +64,17 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return _banks.count;
+    return _bankNames.count;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return [_banks objectAtIndex:row];
+    return [_bankNames objectAtIndex:row];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    NSLog(@"%@", [_banks objectAtIndex:row]);
+    [self filterBankWithName:[_bankNames objectAtIndex:row]];
 }
 
 #pragma mark - User Defide
@@ -83,13 +85,45 @@
 {
     PALocationService *locationService = [PALocationService defaultService];
     NSArray *mapItems = [locationService getAnnotationViewWithType:2];
+    _banks = mapItems;
     for (PALocationItem *item in mapItems) {
         [self.mapView addAnnotation:item];
     }
 }
+
+/****************************************************
+ Get list of name
+ ****************************************************/
+- (NSArray*)getBankNameList
+{
+    if (_banks.count == 0) return nil;
+    
+    NSMutableArray *returnData = [[NSMutableArray alloc]initWithCapacity:1];
+    
+    for (PALocationItem *item in _banks) {
+        if ([returnData indexOfObject:item.getMapItem.corporation] > returnData.count) {
+            [returnData addObject:item.getMapItem.corporation];
+        }
+    }
+    
+    return returnData;
+}
+
+/****************************************************
+ Set annotation View for filtered Banks
+ ****************************************************/
+- (void)filterBankWithName:(NSString*)name
+{
+    [self.mapView removeAnnotations:_banks];
+    for (PALocationItem *item in _banks) {
+        if ([item.getMapItem.corporation isEqualToString:name]) {
+            [self.mapView addAnnotation:item];
+        }
+    }
+}
+
 #pragma mark - IBAction
 - (IBAction)onFilterButtonDidTouch:(id)sender {
     self.pickerView.hidden = NO;
-
 }
 @end
