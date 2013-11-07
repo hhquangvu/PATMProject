@@ -19,7 +19,6 @@
     #import "MapItem.h"
     #import "UnitOfWork.h"
     #import "BaseReponsitory.h"
-    #import "PALocationService.h"
     #import "PABaseMapController.h"
     #import "PALocationItem.h"
 #endif

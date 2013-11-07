@@ -12,7 +12,6 @@
 		84876A70181D6DF5006021C6 /* MapItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 84876A6F181D6DF5006021C6 /* MapItem.m */; };
 		84876A73181D9A87006021C6 /* PAGasDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84876A72181D9A87006021C6 /* PAGasDetailController.m */; };
 		84876A76181EBA5C006021C6 /* PAATMFindController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84876A75181EBA5C006021C6 /* PAATMFindController.m */; };
-		84876A79181EBC02006021C6 /* PALocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 84876A78181EBC02006021C6 /* PALocationService.m */; };
 		848F46971826AD31009F0A2D /* ico_gas_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 848F46951826AD31009F0A2D /* ico_gas_ok.png */; };
 		848F46991826AD9A009F0A2D /* ico_gas_bad.png in Resources */ = {isa = PBXBuildFile; fileRef = 848F46981826AD9A009F0A2D /* ico_gas_bad.png */; };
 		848F469E1826BCA9009F0A2D /* ico_pin_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 848F469C1826BCA9009F0A2D /* ico_pin_green.png */; };
@@ -73,8 +72,6 @@
 		84876A72181D9A87006021C6 /* PAGasDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAGasDetailController.m; sourceTree = "<group>"; };
 		84876A74181EBA5C006021C6 /* PAATMFindController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAATMFindController.h; sourceTree = "<group>"; };
 		84876A75181EBA5C006021C6 /* PAATMFindController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAATMFindController.m; sourceTree = "<group>"; };
-		84876A77181EBC02006021C6 /* PALocationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PALocationService.h; sourceTree = "<group>"; };
-		84876A78181EBC02006021C6 /* PALocationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PALocationService.m; sourceTree = "<group>"; };
 		848F46951826AD31009F0A2D /* ico_gas_ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_gas_ok.png; sourceTree = "<group>"; };
 		848F46981826AD9A009F0A2D /* ico_gas_bad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_gas_bad.png; sourceTree = "<group>"; };
 		848F469C1826BCA9009F0A2D /* ico_pin_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_pin_green.png; sourceTree = "<group>"; };
@@ -248,8 +245,6 @@
 				84A51E64181C3BF30068D166 /* BaseReponsitory.m */,
 				84A51E65181C3BF30068D166 /* UnitOfWork.h */,
 				84A51E66181C3BF30068D166 /* UnitOfWork.m */,
-				84876A77181EBC02006021C6 /* PALocationService.h */,
-				84876A78181EBC02006021C6 /* PALocationService.m */,
 				8474AACB182BE7BE0083B238 /* PAMapItemRepository.h */,
 				8474AACC182BE7BE0083B238 /* PAMapItemRepository.m */,
 			);
@@ -524,7 +519,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A51E69181C3BF30068D166 /* UnitOfWork.m in Sources */,
-				84876A79181EBC02006021C6 /* PALocationService.m in Sources */,
 				8490778D1820104C0077ED27 /* PABaseMapController.m in Sources */,
 				84876A70181D6DF5006021C6 /* MapItem.m in Sources */,
 				84876A76181EBA5C006021C6 /* PAATMFindController.m in Sources */,

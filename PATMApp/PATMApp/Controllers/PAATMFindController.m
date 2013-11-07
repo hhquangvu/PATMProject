@@ -83,8 +83,7 @@
  ****************************************************/
 -  (void)getATMFromServer
 {
-    PALocationService *locationService = [PALocationService defaultService];
-    NSArray *mapItems = [locationService getAnnotationViewWithType:2];
+    NSArray *mapItems = [self getAnnotationViewWithType:2];
     _banks = mapItems;
     for (PALocationItem *item in mapItems) {
         [self.mapView addAnnotation:item];

@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
-        <!--Gas Find Controller-->
+        <!--Gas Find Controller - Gas Station-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="PAGasFindController" sceneMemberID="viewController">
@@ -23,7 +23,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="kFL-d0-4Vj"/>
+                    <navigationItem key="navigationItem" title="Gas Station" id="kFL-d0-4Vj">
+                        <barButtonItem key="rightBarButtonItem" title="Me" id="5Hd-vP-UJf">
+                            <connections>
+                                <action selector="onMeButtonDidTouch:" destination="vXZ-lx-hvc" id="zrM-Dr-vEw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="rKp-GX-F0G" id="9Mu-hP-cfD"/>
                     </connections>
@@ -32,7 +38,7 @@
             </objects>
             <point key="canvasLocation" x="1190" y="91"/>
         </scene>
-        <!--Find Controller-->
+        <!--Find Controller - ATM Finder-->
         <scene sceneID="WHv-UU-iOX">
             <objects>
                 <viewController id="wCZ-Q0-KO2" customClass="PAATMFindController" sceneMemberID="viewController">
@@ -55,10 +61,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JjV-zQ-sjc">
+                    <navigationItem key="navigationItem" title="ATM Finder" id="JjV-zQ-sjc">
                         <barButtonItem key="leftBarButtonItem" title="..." id="QsN-ZM-XS4">
                             <connections>
                                 <action selector="onFilterButtonDidTouch:" destination="wCZ-Q0-KO2" id="Lwi-t4-a6E"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Me" id="oFs-ot-Kyb">
+                            <connections>
+                                <action selector="onMeButtonDidTouch:" destination="wCZ-Q0-KO2" id="P7d-fy-Zd9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
