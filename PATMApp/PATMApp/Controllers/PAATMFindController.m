@@ -73,6 +73,7 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     [self filterBankWithName:[_bankNames objectAtIndex:row]];
+    self.pickerView.hidden = YES;
 }
 
 #pragma mark - User Defide
@@ -132,6 +133,10 @@
 
 #pragma mark - IBAction
 - (IBAction)onFilterButtonDidTouch:(id)sender {
-    self.pickerView.hidden = NO;
+    if (self.pickerView.hidden) {
+        self.pickerView.hidden = NO;
+    } else {
+        self.pickerView.hidden = YES;
+    }
 }
 @end
