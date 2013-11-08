@@ -47,8 +47,6 @@
     
     [self getATMFromServer];
     
-    _bankNames = [self getBankNameList];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,11 +81,22 @@
  ****************************************************/
 -  (void)getATMFromServer
 {
-    NSArray *mapItems = [self getAnnotationViewWithType:2];
-    _banks = mapItems;
-    for (PALocationItem *item in mapItems) {
-        [self.mapView addAnnotation:item];
-    }
+    dispatch_queue_t myQueue = dispatch_queue_create("myapp", nil);
+    
+    dispatch_async(myQueue, ^{
+        NSArray *mapItems = [self getAnnotationViewWithType:2];
+        dispatch_async(dispatch_get_main_queue(), ^{
+    
+            _banks = mapItems;
+            
+            _bankNames = [self getBankNameList];
+            [self.pickerView reloadAllComponents];
+            
+            for (PALocationItem *item in mapItems) {
+                [self.mapView addAnnotation:item];
+            }
+        });
+    });
 }
 
 /****************************************************

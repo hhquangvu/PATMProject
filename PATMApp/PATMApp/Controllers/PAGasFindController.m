@@ -88,9 +88,17 @@
  ****************************************************/
 -  (void)getGasStationFromServer
 {
-    NSArray *mapItems = [self getAnnotationViewWithType:1];
-    for (PALocationItem *item in mapItems) {
-        [self.mapView addAnnotation:item];
-    }
+    dispatch_queue_t myQueue = dispatch_queue_create("myapp", nil);
+    
+    dispatch_async(myQueue, ^{
+        NSArray *mapItems = [self getAnnotationViewWithType:1];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            for (PALocationItem *item in mapItems) {
+                [self.mapView addAnnotation:item];
+            }
+        });
+    });
+    
+    
 }
 @end
