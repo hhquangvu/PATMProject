@@ -32,13 +32,15 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.pickerView.hidden = YES;
+    
+    [locationManager setDelegate:self];
+
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
     
     // Set delegate for map view, very important
     [self.mapView setDelegate:self];

@@ -35,6 +35,13 @@
     [self getGasStationFromServer];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    
+    [locationManager setDelegate:self];
+
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

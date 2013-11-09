@@ -21,4 +21,5 @@
     #import "BaseReponsitory.h"
     #import "PABaseMapController.h"
     #import "PALocationItem.h"
+    #import "PALocationManager.h"
 #endif

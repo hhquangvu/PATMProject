@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "PALocationManager.h"
 
 @interface PABaseMapController : UIViewController<MKMapViewDelegate,CLLocationManagerDelegate>{
-    CLLocationManager *locationManager;
-    BOOL canUpdate;
+    PALocationManager *locationManager;
 }
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;

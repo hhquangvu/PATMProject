@@ -36,27 +36,28 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark - Location Manager Cycle
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    if (!canUpdate) return;
-    
-    canUpdate = NO;
-    
     CLLocation *location = [locations lastObject];
     
     if (!location) return;
     
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 800, 800);
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 400, 400);
     
     [self.mapView setRegion:viewRegion];
+    
+    [self.mapView setCenterCoordinate:location.coordinate];
+    [self.mapView setShowsUserLocation:YES];
+    
+    [locationManager stopUpdatingLocation];
 }
 
 - (IBAction)onMeButtonDidTouch:(id)sender {
-    canUpdate = YES;
+    [locationManager startUpdatingLocation];
 }
 
-#pragma mark - User Defide
+#pragma mark - User Defined
 /****************************************************
  Check your location services is turn on
  ****************************************************/
@@ -80,12 +81,10 @@
  ****************************************************/
 - (void)initLocationService
 {
-    canUpdate = YES;
-    locationManager = [[CLLocationManager alloc]init];
+    locationManager = [PALocationManager defaultInstance];
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager setDelegate:self];
     [locationManager startUpdatingLocation];
-    
 }
 
 
