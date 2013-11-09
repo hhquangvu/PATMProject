@@ -22,17 +22,13 @@ static UnitOfWork *unitOfWork;
     return unitOfWork;
 }
 
-- (BOOL)savedChanges
+- (void)savedChanges
 {
-    NSError *error;
-    [self.managedObjectContext save:&error];
-    
-    if (error) {
-        NSLog(@"Cannot Save data context");
-        return NO;
-    }
-    
-    return YES;
+    [self.managedObjectContext saveOnSuccess:^{
+        NSLog(@"Save ok");
+    } onFailure:^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
 }
 
 - (id)init

@@ -10,7 +10,7 @@
 
 @implementation PALocationManager
 
-const CLLocationManager *LOCATION_MANAGER;
+static CLLocationManager *LOCATION_MANAGER;
 
 + (id)defaultInstance
 {

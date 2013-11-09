@@ -65,9 +65,14 @@
     
 }
 - (IBAction)onNoticeButtonDidTouch:(id)sender {
-    UnitOfWork *unitOfWork = [UnitOfWork sharedInstance];
     
-    [_mapItem setValue:[NSNumber numberWithInt:9999] forKey:@"rate"];
+    UnitOfWork *unitOfWork = [UnitOfWork sharedInstance];
+    BaseReponsitory *mapItemRepository = unitOfWork.mapItemRepository;
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"mapitem_id=%@",_mapItem.mapitem_id];
+    MapItem *object = [mapItemRepository getObjectWithPredicate:predicate];
+    
+    [object setRate:[NSNumber numberWithInt:22]];
 
     [unitOfWork savedChanges];
 

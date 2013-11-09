@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-- (BOOL)savedChanges;
+- (void)savedChanges;
 + (id)sharedInstance;
 
 @property (strong, nonatomic) id mapItemRepository;

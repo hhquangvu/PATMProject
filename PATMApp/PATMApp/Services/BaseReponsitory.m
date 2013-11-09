@@ -10,6 +10,30 @@
 
 @implementation BaseReponsitory
 
+// Get Object
+- (id)getObjectWithPredicate:(NSPredicate*)predicate
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:[self.class description]];
+    
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *fetchError;
+    
+    id fetchObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&fetchError];
+    
+    if (fetchError) {
+        NSLog(@"Cannot Fetch");
+        return nil;
+    }
+    
+    if ([fetchObjects count] == 0) {
+        NSLog(@"Cannot find Object");
+        return nil;
+    }
+    
+    return [fetchObjects lastObject];
+}
+
 // get all function
 - (NSArray *)getAll
 {
