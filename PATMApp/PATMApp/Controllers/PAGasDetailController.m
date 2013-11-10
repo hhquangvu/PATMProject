@@ -39,6 +39,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - AlertView Cycle
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        
+        UnitOfWork *unitOfWork = [UnitOfWork sharedInstance];
+        [_mapItem setRate:[NSNumber numberWithInt:(_mapItem.rate.intValue - 1)]];
+        [unitOfWork savedChanges];
+        
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Thông báo" message:@"Cám ơn bạn đã cung cấp thông tin." delegate:self cancelButtonTitle:@"Đồng ý" otherButtonTitles: nil];
+        
+        [alertView show];
+
+    }
+}
+
 - (void)setMapItem:(MapItem *)mapItem
 {
     _mapItem = mapItem;
@@ -66,15 +82,8 @@
 }
 - (IBAction)onNoticeButtonDidTouch:(id)sender {
     
-    UnitOfWork *unitOfWork = [UnitOfWork sharedInstance];
-    BaseReponsitory *mapItemRepository = unitOfWork.mapItemRepository;
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Thông báo" message:@"Đây là chức năng báo cây xăng này có vấn đề xấu hoặc gian lận. Bạn có chắc chắn cây xăng này không tốt." delegate:self cancelButtonTitle:@"Hủy bỏ" otherButtonTitles:@"Chắc chắn", nil];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"mapitem_id=%@",_mapItem.mapitem_id];
-    MapItem *object = [mapItemRepository getObjectWithPredicate:predicate];
-    
-    [object setRate:[NSNumber numberWithInt:22]];
-
-    [unitOfWork savedChanges];
-
+    [alertView show];
 }
 @end

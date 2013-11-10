@@ -39,7 +39,6 @@
 {
     
     [locationManager setDelegate:self];
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,7 +48,6 @@
 }
 
 #pragma mark - CLLocationManager Life Cycle
-
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
     if (![annotation isKindOfClass:[PALocationItem class]]) {
@@ -89,6 +87,14 @@
     
     [self.navigationController pushViewController:gasDetailController animated:YES];
 }
+#pragma mark - IBAction Cycle
+- (IBAction)onUpdateButtonDidTouch:(id)sender
+{
+    [self.mapView removeAnnotations:[self.mapView annotations]];
+    
+    [self getGasStationFromServer];
+}
+
 #pragma mark - User Defined
 /****************************************************
  Get Map Item from server (Gas)

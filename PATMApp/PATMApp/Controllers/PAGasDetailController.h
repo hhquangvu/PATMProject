@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PAGasDetailController : UIViewController{
+@interface PAGasDetailController : UIViewController<UIAlertViewDelegate>{
     @private
     MapItem *_mapItem;
 }

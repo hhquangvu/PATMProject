@@ -32,6 +32,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Danh sách trạm xăng" id="kFL-d0-4Vj">
+                        <barButtonItem key="leftBarButtonItem" title="Cập nhật" id="MFU-Mj-rld">
+                            <connections>
+                                <action selector="onUpdateButtonDidTouch:" destination="vXZ-lx-hvc" id="bvh-wd-hoM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Tôi" id="5Hd-vP-UJf">
                             <connections>
                                 <action selector="onMeButtonDidTouch:" destination="vXZ-lx-hvc" id="zrM-Dr-vEw"/>
